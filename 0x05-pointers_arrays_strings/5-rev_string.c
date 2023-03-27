@@ -18,7 +18,7 @@ length++;
 
 count = length;
 
-start_c =s;
+start_c = s;
 end_c = s;
 
 
