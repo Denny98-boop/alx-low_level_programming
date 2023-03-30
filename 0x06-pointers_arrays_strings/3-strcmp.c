@@ -2,22 +2,22 @@
 
 /**
  *_strcmp - compares two strings
- *@s1: a pointer to a character that will be changed
- *@s2: A pointer to a character that will also be changed
- *Return: dest
+ *@s1: a pointer to first string
+ *@s2: A pointer to second string
+ *Return:dest
  */
-int _strcmp(char *s1, char *s2);
+int _strcmp(char *s1, char *s2)
 
 {
-char *str_one = s1;
-char *str_two = s2;
+int counter, compare_value;
 
-while (*str_one != '\0' && *str_two != '\0' && *str_one == *str_two)
+counter = 0;
+while (s1[counter] == s2[counter] && s1[counter] != '\0')
 {
-str_one++;
-str_two++;
+counter++;
 }
 
-return (*str_one - *str_two);
+compare_value = s1[counter] - s2[counter];
+return (compare_value);
 }
 
