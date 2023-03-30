@@ -2,28 +2,21 @@
 
 /**
  *_strncpy - copies a string
- *@dest: A pointer to a character that will be changed
- *@src: A pointer to a character that will be changed
- *@n: value
- *Return: dest
+ *@dest: destination string
+ *@src: source string pointer
+ *@n: number of bytes to be used
+ *Return: pointer to destination string
  */
 char *_strncpy(char *dest, char *src, int n)
 
 {
-int i;
+int count_of_bytes;
 
-i = 0;
-while (i < n && src[i] != '\0')
-{
-dest[i] = src[i];
-i++;
-}
+for (count_of_bytes = 0; count_of_bytes < n && src[count_of_bytes] != '\0'; count_of_bytes++)
+dest[count_of_bytes] = src[count_of_bytes];
 
-while (i < n)
-{
-dest[i] = '\0';
-i++;
-}
+for (; count_of_bytes < n; count_of_bytes++)
+dest[count_of_bytes] = '\0';
 
 return (dest);
 }
